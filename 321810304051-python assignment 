@@ -1,0 +1,52 @@
+#1.to read entirelines
+def read(a):
+        txt = open(a)
+        print(txt.read())
+a=input("enter the file name:")
+read(a)
+#output:
+#enter the file name:d.t
+#read all strings
+##2.read n lines
+def readfirst(a, n):
+        from itertools import islice
+        with open(a) as f:
+                for l in islice(f,n):
+                        print(l,end ='')
+a=input("enter the file name:")
+readfirst(a,2)
+##3.
+def read(a):
+        from itertools import islice
+        with open(a,"w") as file:
+                file.write("hi\n")
+                file.write("hello")
+        txt = open(a)
+        print(txt.read())
+read('abc.txt')
+##4
+def LastNLines(f,n):
+    with open(f) as file:
+        print('Last',n,"lines from file:",f)
+        for line in (file.readlines() [-n:]):
+            print(line, end='')
+name=input("enter the file name:" )
+n= int(input("no of last lines to read:"))
+try:
+    LastNLines(name,n)
+except:
+    print("file error....")
+##5.
+def read(a):
+        with open (a) as file:
+                cse=file.readlines()
+                print(cse)
+a=input("enter the file name:")
+read(a)
+##6.
+def read(a):
+        with open(a) as file:     
+                list = file.readlines()
+                print(list)
+a=input("enter the file name:")
+read(a)
